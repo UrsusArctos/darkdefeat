@@ -1,0 +1,111 @@
+%
+% The Dark Defeat Project
+%
+\documentclass[a4paper,12pt,twoside]{book}
+%
+% === [1. Document setup ] ===
+%
+% Allow for searchable PDF and text copypasting
+\usepackage{cmap}
+% cyrillic fonts
+% \usepackage[T2A]{fontenc}
+% encoding of input files
+\usepackage[utf8]{inputenc}
+% languages supported
+\usepackage[english]{babel}
+% Speech quotations
+\usepackage{dirtytalk}
+% Output setup
+\pdfcompresslevel=9
+% Allow for external pictures inclusion
+% \usepackage{graphicx}
+% Tables fitting width
+% \usepackage{tabularx}
+% Enumerated lists package
+% \usepackage{enumerate}
+% Citation packages
+% \usepackage{cite}
+% URL formatting
+\usepackage{url}
+% Text coloring
+\usepackage{color}
+\usepackage[framemethod=tikz]{mdframed}
+\newcommand{\royaldecree}[1]{\begin{mdframed}[hidealllines=true,backgroundcolor=blue!20]#1\end{mdframed}}
+% Code Listing formatting
+%\usepackage{listings}
+%\definecolor{lightyellow}{rgb}{1,1,0.7}
+%\lstset{basicstyle=\footnotesize\ttfamily,
+%        backgroundcolor=\color{lightyellow},
+%        frame=single,
+%        breaklines=false,
+%        frameround={fttt}}
+% Visual guide to formatting
+%\usepackage{showframe}
+% Fix chapter spacing
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@makechapterhead}{\vspace*{50\p@}}{}{}{}% Removes space above \chapter head
+\patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{}{}{}% Removes space above \chapter* head
+\makeatother
+% Trueness of typesettings
+\usepackage{soul}
+% Page setup
+\usepackage[top=2cm, bottom=2cm, inner=2cm, outer=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+% Licensing
+\usepackage{hyperxmp}
+\usepackage[type={CC},modifier={by-sa},version={4.0}]{doclicense}
+% QR Codes
+\usepackage{qrcode}
+%
+% === [2. Document start ] ===
+%
+\begin{document}
+%
+% === [3. Title page ] ===
+%
+\pagestyle{empty}
+\title{\textbf{The Dark Defeat}}
+\author{
+Gennadiy V. Poryev
+}
+\date{}
+\maketitle
+%
+% === [4. Further layout and render setup ] ===
+%
+% Define Page style for all chapters
+\pagestyle{fancy}
+% Delete the current section for header and footer
+\fancyhf{}
+% Set custom header
+\lhead[]{\thepage}
+\rhead[\thepage]{}
+% Set arabic (1,2,3...) page numbering
+\pagenumbering{arabic}
+% Set spacing for the text
+%\doublespacing
+\linespread{1.2}
+%
+% === [5. TEXT: Preface ] ===
+%
+\include{0-preface}
+%
+% === [6. TEXT: Table of contents ] ===
+%
+\newpage
+% Include dots between chapter name and page number
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+\tableofcontents
+\newpage
+\thispagestyle{empty}
+%
+% === [7. TEXT: Chapters ] ===
+%
+\include{1-chap}
+%
+\include{2-chap}
+%
+\end{document}
