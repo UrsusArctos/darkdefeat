@@ -1,14 +1,11 @@
 #!/bin/bash
 #
-rm *.toc
 rm *.aux
 rm *.log
+rm *.out
 rm *.pdf
-#rm *.bbl
-#rm *.dvi
-#rm *.blg
+rm *.toc
 #
-pdflatex tdd
 pdflatex tdd
 pdflatex tdd
 #
