@@ -70,6 +70,9 @@ Gennadiy V. Poryev
 % Set spacing for the text
 %\doublespacing
 \linespread{1.2}
+% Since we ditched chapters, leading zeroes from section numbers must be removed
+%\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesection}{\arabic{section}.}
 %
 % === [5. TEXT: Preface ] ===
 %
