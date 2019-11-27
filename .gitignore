@@ -1,7 +1,24 @@
+# Build targets and auxiliary scripts
+*.pdf
+*.epub
+pfix.sh
+# Junk files left out after processing
 *.aux
 *.log
 *.out
-*.pdf
 *.toc
-pfix.sh
+*.opf
+*.4ct
+*.4tc
+*.css
+*.dvi
+*.html
+*.idv
+*.lg
+*.ncx
+*.tmp
+*.xref
+# Junk directories left out after processing
+tdd-epub
+# Auxiliary directories
 .vscode

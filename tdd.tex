@@ -41,6 +41,19 @@
 \usepackage[type={CC},modifier={by-sa},version={4.0}]{doclicense}
 % QR Codes
 \usepackage{qrcode}
+% EPUB authorship hack
+\usepackage{pdftexcmds}
+\makeatletter
+\newcommand\pdforepub[2]{%
+  \ifnum\pdf@strcmp{\jobname}{\unexpanded{TheDarkDefeat}}=0 %
+     \expandafter\@firstoftwo
+  \else
+    \expandafter\@secondoftwo
+  \fi
+    {#1}
+    {#2}%
+}
+\makeatother
 %
 % === [2. Document start ] ===
 %
