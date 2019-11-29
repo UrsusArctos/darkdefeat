@@ -12,7 +12,13 @@ Finally, most important and hard to overcome problem, often completely overlooke
 
 And here goes my attempt to overcome all of the aforementioned problems in a way that is both realistic and entertaining. Enjoy!
 
-This is the version compiled on \today.
+\DTMnewdatestyle{customtdd}{%
+  \renewcommand*{\DTMdisplaydate}[4]{\DTMenglishmonthname{##2} \DTMenglishordinal{##3}, ##1}%
+  \renewcommand*{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+\DTMsetdatestyle{customtdd}
+
+This is the version compiled on \DTMToday\ \DTMcurrenttime %\ UTC\DTMdisplayzone{0}{0}
 
 \section*{Licensing}
 
