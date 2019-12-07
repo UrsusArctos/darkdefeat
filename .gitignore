@@ -22,3 +22,5 @@ pfix.sh
 tdd-epub
 # Auxiliary directories
 .vscode
+# Not yet ready to publish materials
+world
