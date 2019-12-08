@@ -12,7 +12,6 @@
 % languages supported
 \usepackage[english]{babel}
 % Date and time
-% \usepackage[showisoZ=false,showdow=false,,,english]{datetime2}
 \usepackage[showisoZ=false]{datetime2}
 % Speech quotations
 \usepackage{dirtytalk}
@@ -86,9 +85,9 @@ Gennadiy V. Poryev
 % Set spacing for the text
 %\doublespacing
 \linespread{1.2}
-% Since we ditched chapters, leading zeroes from section numbers must be removed
+% If we ditch chapters again, leading zeroes from section numbers must be removed
 %\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
-\renewcommand{\thesection}{\arabic{section}.}
+%\renewcommand{\thesection}{\arabic{section}.}
 %
 % === [5. TEXT: Preface ] ===
 %
@@ -108,5 +107,11 @@ Gennadiy V. Poryev
 \include{1-chap}
 %
 \include{2-chap}
+%
+\include{3-chap}
+%
+\appendix
+%
+\include{9-appn}
 %
 \end{document}
